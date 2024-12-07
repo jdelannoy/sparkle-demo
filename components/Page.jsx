@@ -156,6 +156,7 @@ export default function Page({ desktopData, mobileData, isAuthorVersion, host })
                 ignoreHash={ignoreHash}
                 setIgnoreHash={setIgnoreHash}
                 viewType={viewType}
+                runOnEnd={() => {}}
               />
             );
           })}
