@@ -19,13 +19,21 @@ const isMenu = obj => {
 
 export default function TextLayer({ data, activeMenuItem }) {
   return (
-    <div className={"textLayer"} id={data?.id}>
+    <div className={"textLayer"} id={data?.id} 
+         data-aue-resource={`urn:aemconnection:${data._path}/jcr:content/data/master`} 
+         data-aue-type="reference"
+         data-aue-label="Text Layer">
       {data?.column?.length ? (
-        <div className={`columnWrapper ${data?.textPosition || ""} ${data?.noPadding ? "noPadding" : ""}`}>
+        <div className={`columnWrapper ${data?.textPosition || ""} ${data?.noPadding ? "noPadding" : ""}`}
+              data-aue-prop="column" data-aue-type="container" data-aue-label="column">
           {data?.column?.map((item, index) => {
             const MatchingComponent = textItemLookup[item.type] || "p";
             return (
-              <MatchingComponent key={index} className={`${item.type} ${item?.styles?.join(" ")}`} id={item.id}>
+              <MatchingComponent key={index} className={`${item.type} ${item?.styles?.join(" ")}`} id={item.id}
+                data-aue-resource={`urn:aemconnection:${item._path}/jcr:content/data/master`}
+                data-aue-type="component"
+                data-aue-label="Text Item"
+                data-aue-prop="content/plaintext" >
                 {item.content?.plaintext}
               </MatchingComponent>
             );

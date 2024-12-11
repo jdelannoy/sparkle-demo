@@ -1,5 +1,5 @@
 const fetchConfig = {
-  authorHost: "https://author-p13953-e1500442.adobeaemcloud.com", // RDE
+  authorHost: window.NEXT_PUBLIC_AUTHOR_HOST, 
   // publishHost: "",
   fallbackHost: "https://publish-p81252-e700817.adobeaemcloud.com",
   endpoint: "graphql/execute.json/sample-wknd-app/homepage",

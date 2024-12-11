@@ -1,0 +1,27 @@
+{
+    "groups": [
+        {
+            "title": "Content Fragments",
+            "id": "content-fragments",
+            "components": [
+                {
+                    "title": "Text Item",
+                    "id": "textitem",
+                    "plugins": {
+                        "aem": {
+                            "cf": {
+                                "name": "textitem",
+                                "cfModel": "/conf/sample-wknd-app/settings/dam/cfm/models/textitem",
+                                "cfFolder": "/content/dam/sample-wknd-app/en/content-fragments/text-items",
+                                "title": "textitem",
+                                "template": {
+                                    "content": "Lorum ipsum",
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
